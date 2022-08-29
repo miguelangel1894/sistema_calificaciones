@@ -9,6 +9,7 @@
     transition: width 0.2s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: relative;
+    z-index: 1;
 }
 
 .sidebar-container-close{
@@ -22,6 +23,7 @@
     transition: width 0.2s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: relative;
+    z-index: 1;
 }
 
 .icon{
@@ -44,7 +46,7 @@
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     transition: margin-left 0.2s ease-in-out;
-    background: #92A693
+    background: #9FC131
 }
 
 .toggle-close{
@@ -58,7 +60,7 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     transition: margin-left 0.2s ease-in-out;
-    background: #387373
+    background: #9FC131
 }
 
 .toggle:hover{
@@ -66,7 +68,7 @@
 }
 
 .toggle-close:hover{
-    background: gray;
+    background: #387373;
 }
 
 .sidebar-title{

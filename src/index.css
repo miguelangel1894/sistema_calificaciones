@@ -15,6 +15,7 @@ nav{
 aside{
   width: 11%;
   height: 93vh;
+  z-index: 10;
 }
 
 section{

@@ -49,8 +49,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -63,8 +63,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -77,8 +77,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -91,8 +91,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -105,8 +105,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -119,8 +119,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -133,8 +133,8 @@ export function Table(){
                     <td>1102866338</td>
                     <td>Bohorquez Cuello</td>
                     <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
+                    <td><p>Kinder</p></td>
+                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
                     <td className="option">
                         <ion-icon name="document-attach"></ion-icon>
                         <ion-icon name="print"></ion-icon>
@@ -142,76 +142,7 @@ export function Table(){
                         <ion-icon name="close-circle"></ion-icon>
                     </td>
                 </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td>Kinder</td>
-                    <td>3045232221</td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
+                
                 <tr className="footer">
                     <td colSpan={7}>
                         <div className="table-footer">

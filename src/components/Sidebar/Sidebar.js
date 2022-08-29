@@ -30,8 +30,8 @@ export function Sidebar (){
                     </a>
                 </li>
             </ul>
-            <div className={`${toggle? 'toggle': 'toggle-close'}`}>
-                <span className='icon' onClick={() => setToggle(!toggle)}><ion-icon name="ellipsis-vertical-outline"></ion-icon></span>
+            <div onClick={() => setToggle(!toggle)} className={`${toggle? 'toggle': 'toggle-close'}`}>
+                <span className='icon'><ion-icon name="ellipsis-vertical-outline"></ion-icon></span>
             </div>
         </div>
     )

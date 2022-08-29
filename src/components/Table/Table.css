@@ -8,7 +8,7 @@
 .table-container .table-info-result{
     width: 320px;
     height: 32px;
-    background: #3db7bf;
+    background: #042940;
     border-top-left-radius: 11px;
     border-top-right-radius: 0.5em;
 
@@ -29,7 +29,7 @@
 .table-container .table-info-result .div-info ion-icon{
     font-size: 15px;
     margin: 6px;
-    color: #3db7bf;
+    color: #042940;
 }
 
 .table-container .table-info-result .div-info h2{
@@ -49,7 +49,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 0.7rem;
     color: white;
-    background: #3db7bf;
+    background: #042940;
     border: none;
     margin: auto;
 }
@@ -96,6 +96,52 @@
 }
 
 .table-container .option-file .option ion-icon{
-    color: #3db7bf;
+    color: #042940;
     margin-left: 4px;
+}
+
+.table-container .option-file p{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    background: #9FC131;
+    padding: 2px;
+    border-radius: 1em;
+}
+
+.table-container .option-file button{
+    height: 27px;
+    border: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    background: #005C53;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.table-container .option-file button p{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 7px;
+    margin-top: 1px;
+    background: #005C53;
+    padding: 2px;
+    border-radius: 1em;
+}
+
+.table-container .option-file button ion-icon{
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-right: 3px;
 }

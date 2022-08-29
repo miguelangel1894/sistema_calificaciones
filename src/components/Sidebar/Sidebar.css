@@ -1,0 +1,153 @@
+.sidebar-container{
+    width: 234px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: white;
+    transition: width 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+}
+
+.sidebar-container-close{
+    width: 138px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: white;
+    transition: width 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.icon-close{
+    font-size: 25px;
+    color: gray;
+}
+
+.toggle{
+    padding: 10px;
+    width: 21px;
+    height: 31px;
+    align-content: center;
+    position: absolute;
+    margin-left: 194px;
+    margin-top: 35px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: margin-left 0.2s ease-in-out;
+    background: #92A693
+}
+
+.toggle-close{
+    padding: 10px;
+    width: 21px;
+    height: 31px;
+    align-content: center;
+    position: absolute;
+    margin-left: 138px;
+    margin-top: 35px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: margin-left 0.2s ease-in-out;
+    background: #387373
+}
+
+.toggle:hover{
+    background: #387373
+}
+
+.toggle-close:hover{
+    background: gray;
+}
+
+.sidebar-title{
+    margin-top: 50px;
+    margin-left: 109px;
+    margin-bottom: 23px;
+    color: rgb(70, 70, 70);
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.opacity{
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 33%;
+    margin-left: 38px;
+    margin-top: 33px;
+    border: 5px solid rgb(219, 219, 219);
+}
+
+.sidebar-container p{
+    margin-top: 30px;
+    margin-left: 38px;
+    font-size: 11px;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar-container-close p{
+    margin-top: 30px;
+    margin-left: 38px;
+    font-size: 11px;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.search-span{
+    position: absolute;
+    margin-top: 163px;
+    margin-left: 49px;
+    color: gray;
+}
+
+.search:hover{
+    border: 2px solid orange;
+}
+
+ul{
+    text-align: left;
+}
+
+li{
+    width: 150px;
+    height: 35px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    list-style: none;
+
+}
+
+ul li ion-icon{
+    font-size: 15px;
+    color: gray;
+    margin-right: 10px;
+}
+
+ion-icon{
+    padding-top: 3px;
+    color: white;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}

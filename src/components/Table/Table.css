@@ -1,0 +1,101 @@
+.table-container{
+    border-collapse: collapse;
+    overflow: hidden;
+    text-align: center;
+    width: 70%;
+}
+
+.table-container .table-info-result{
+    width: 320px;
+    height: 32px;
+    background: #3db7bf;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 0.5em;
+
+}
+
+.table-container .table-info-result .div-info{
+    width: 212px;
+    height: 33px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 0.7em;
+    margin: -1px;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.table-container .table-info-result .div-info ion-icon{
+    font-size: 15px;
+    margin: 6px;
+    color: #3db7bf;
+}
+
+.table-container .table-info-result .div-info h2{
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 8px;
+    color: #585858
+}
+
+.table-container .table-info-result .div-info button{
+    width: 105px;
+    height: 26px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    color: white;
+    background: #3db7bf;
+    border: none;
+    margin: auto;
+}
+
+.table-container .table-info-result .div-info button ion-icon{
+    color: white;
+    margin: -2px;
+    margin-right: 1px;
+}
+
+.table-container .title{
+    color: #454545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    height: 39px;
+    border-bottom: 4px solid #ecebeb;
+    background: #fffdfd;
+}
+
+.table-container .title ion-icon{
+    margin: -9px;
+    padding-left: 9px;
+    color: #e9e9e9;
+}
+
+.table-container .table-info-color{
+    background: rgb(64, 201, 201);
+    width: 100px;
+    height: 32px;
+}
+
+.table-container p{
+    font-size: 10px;
+}
+
+.table-container .option-file{
+    background: rgb(255, 255, 255);
+    border-bottom: 0.1em solid rgb(247, 247, 247);
+    width: 20px;  
+}
+
+.table-container td{
+    height: 1em;
+}
+
+.table-container .option-file .option ion-icon{
+    color: #3db7bf;
+    margin-left: 4px;
+}

@@ -5,4 +5,13 @@
     height: 100%;
     display: flex;
     flex-flow: row wrap;
+    position: relative;
+}
+
+.App .bg-container{
+    width: 96%;
+    height: 300px;
+    position: absolute;
+    background: #005C53;
+    z-index: 1;
 }

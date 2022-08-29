@@ -12,6 +12,7 @@ function App() {
       <nav className="App-nav">
         <NavBar />
       </nav>
+      <div className='bg-container'></div>
       <aside>
         <Sidebar/>
       </aside>

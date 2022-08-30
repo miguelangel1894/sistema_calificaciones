@@ -13,6 +13,7 @@ function App() {
         <NavBar />
       </nav>
       <div className='bg-container'></div>
+      <div className="bg-container-gray"></div>
       <aside>
         <Sidebar/>
       </aside>

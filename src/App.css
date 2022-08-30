@@ -9,9 +9,17 @@
 }
 
 .App .bg-container{
-    width: 96%;
+    width: 100%;
     height: 300px;
     position: absolute;
     background: #005C53;
+    z-index: 2;
+}
+
+.App .bg-container-gray{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #f4f4f4;
     z-index: 1;
 }

@@ -3,6 +3,8 @@
     height: 80px;
     margin-bottom: 50px;
     z-index: 2;
+    display: flex;
+    flex-direction: row;
 }
 
 .controlData-container .title-container{
@@ -37,4 +39,78 @@
     position: absolute;
     color: #4d4d4d;
     font-family: 'Poppins', sans-serif;
+}
+
+.controlData-container .input-search{
+    margin-top: 8px;
+    margin-left: -30px;
+    position: relative;
+}
+
+.controlData-container .input-search input{
+    width: 300px;
+    padding-left: 38px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+}
+
+.controlData-container .input-search ion-icon{
+    position: absolute;
+    color: #414141;
+    margin: 15px;
+}
+
+.controlData-container .select-degree{
+    margin-left: 364px;
+    margin-top: 22px;
+    position: relative;
+}
+
+.controlData-container .select-degree label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    position: absolute;
+    margin-left: 11px;
+    margin-top: -10px;
+}
+
+.controlData-container .select-degree select{
+    border: none;
+    background: #ffffff;
+    width: 118px;
+    height: 37px;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-right: 0px; 
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    outline: none;
+    position: absolute;
+}
+
+.controlData-container .select-period label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    position: absolute;
+    margin-left: 145px;
+    margin-top: 11px;
+}
+
+.controlData-container .select-period select{
+    border: none;
+    background: #ffffff;
+    width: 118px;
+    height: 37px;
+    border-radius: 7px;
+    margin-left: 144px;
+    margin-right: 0px;
+    margin-top: 27px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    outline: none;
+    position: absolute;
 }

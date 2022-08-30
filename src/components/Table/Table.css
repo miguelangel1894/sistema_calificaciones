@@ -146,3 +146,14 @@
     margin-left: 4px;
     margin-right: 3px;
 }
+
+.table-container .table-footer select{
+    border: none;
+    background: #f4f4f4;
+    width: 50px;
+    border-radius: 11px;
+    margin-left: 10px;
+    margin-right: 0px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}

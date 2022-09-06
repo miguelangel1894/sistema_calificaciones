@@ -2,6 +2,7 @@ import React  from "react";
 import './dashboard.css'
 import {Table} from '../../components/Table/Table'
 import {ControlData} from '../../components/ControlData/ControlData'
+import {LoginForm} from '../../components/ReactiveForm/LoginForm'
 
 export function Dashboard (){
     return(

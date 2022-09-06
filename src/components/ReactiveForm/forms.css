@@ -1,13 +1,23 @@
-form{
+
+
+.option-file form{
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 400px;
-    height: 500px;
+    flex-direction: row;
+    width: 97%;
+    height: 94%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+.option-file form textarea{
+    height: 100px;
+    width: 80%;
+    color: #585858;
+    resize: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
 h2{
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
@@ -35,16 +45,91 @@ input[type=submit]:hover{
     background-color: #FFF178;
 }
 
-textarea{
-    width: 90%;
-    height: 45px;
-    margin: 5px;
-    border: solid 2px #eeeeee;
-    border-radius: 5px;
+
+/* Estilos en form History */
+
+    .option-file .formHistory .select-dimension-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .option-file .formHistory .select-dimension-container label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #666666;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: -27px;
+    }
+
+    .option-file .formHistory .select-dimension-container select{
+    border: none;
+    background: #ffffff;
+    color: #585858;
+    width: 118px;
+    height: 37px;
+    border-radius: 7px;
+    margin-left: 16px;
+    margin-right: 0px;
+    margin-top: -8px;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: start;
-    padding-top: 2px;
-    padding-left: 20px;
-}
+    outline: none;
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    }
+
+    .option-file .formHistory .select-asignatura-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 154px;
+    }
+
+    .option-file .formHistory .select-asignatura-container label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #666666;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: -27px;
+    }
+
+    .option-file .formHistory .select-asignatura-container select{
+    border: none;
+    background: #ffffff;
+    color: #585858;
+    width: 118px;
+    height: 37px;
+    border-radius: 7px;
+    margin-left: 16px;
+    margin-right: 0px;
+    margin-top: -8px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    outline: none;
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    }
+
+    .option-file .formHistory .textArea-area{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-left: 160px;
+        width: 80%;
+    }
+
+    .option-file .formHistory .textArea-area textarea{
+        width: 90%;
+        height: 45px;
+        margin: 5px;
+        border: solid 2px #eeeeee;
+        border-radius: 5px;
+        text-align: center;
+        background-color: white;
+        color: #666666;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: start;
+        padding-top: 2px;
+        padding-left: 20px;
+    }

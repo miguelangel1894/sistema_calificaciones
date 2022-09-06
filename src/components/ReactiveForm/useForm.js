@@ -8,9 +8,7 @@ export const useForm = (initialForm, validationsForm) => {
     const[response, setResponse] = useState(null)
 
     const handleChange = (e) =>{
-        
         const {name, value} = e.target
-
         setForm({
             ...form, 
             [name]: value

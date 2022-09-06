@@ -1,7 +1,17 @@
 import React  from "react";
 import "./Table.css";
+import {TableContent} from './TableContent'
+import {TableContentHistory} from './TableContentHistory'
 
 export function Table(){
+    let titulos =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
+
+    let tableConfig = {
+        title: "Estudiantes",
+        icon: true,
+        isStudent: false
+    }
+
     return(
         <table className="table-container">
             <tbody> 
@@ -10,139 +20,21 @@ export function Table(){
                         <div className="div-info">
                             <ion-icon name="albums"></ion-icon>
                             <h2>Resultados</h2>
-                            <button><ion-icon name="cloud-done"></ion-icon> Usuarios</button>
+                            <button>{tableConfig.icon ? <ion-icon name="cloud-done"></ion-icon> : <ion-icon name="cloud-upload"></ion-icon>} Usuarios</button>
                         </div>
                     </td> 
                 </tr>       
                 <tr className="title">
-                    <td>
-                        Fecha de registro 
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        ID
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        Apellidos
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        Nombres
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        Grado
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        Contacto Acudiente
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
-                    <td>
-                        Opciones
-                        <ion-icon name="caret-down-outline"></ion-icon>
-                    </td>
+                    {titulos.map( titulo =>
+                        <td key={titulo.toString()}>
+                            {titulo} 
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </td>
+                    )}
                 </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                <tr className="option-file">
-                    <td>20/10/2022</td>
-                    <td>1102866338</td>
-                    <td>Bohorquez Cuello</td>
-                    <td>Miguel Ángel</td>
-                    <td><p>Kinder</p></td>
-                    <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
-                    <td className="option">
-                        <ion-icon name="document-attach"></ion-icon>
-                        <ion-icon name="print"></ion-icon>
-                        <ion-icon name="documents"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>
-                
+
+                {tableConfig.isStudent ? <TableContent tableConfig/> : <TableContentHistory tableConfig/>}
+
                 <tr className="footer">
                     <td colSpan={7}>
                         <div className="table-footer">
@@ -161,3 +53,4 @@ export function Table(){
         </table>
     )
 }
+

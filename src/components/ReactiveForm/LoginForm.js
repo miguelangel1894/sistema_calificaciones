@@ -39,7 +39,7 @@ const validationsForm = (form) =>{
     return errors
 }
 
-const LoginForm = () => {
+export const LoginForm = () => {
 
     const {form,
             error,
@@ -90,5 +90,3 @@ const LoginForm = () => {
             </div>
         )
     }
-
-export default LoginForm

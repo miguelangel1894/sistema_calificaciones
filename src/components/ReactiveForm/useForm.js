@@ -1,4 +1,6 @@
 import {useState} from "react";
+import { collection, addDoc, getDocs  } from "firebase/firestore";
+import {database} from '../../firebaseConfig'
 
 export const useForm = (initialForm, validationsForm) => {
 
@@ -20,7 +22,7 @@ export const useForm = (initialForm, validationsForm) => {
         setError(validationsForm(form))
     }
     
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault()
         setError(validationsForm(form))
 
@@ -28,6 +30,15 @@ export const useForm = (initialForm, validationsForm) => {
             alert("el objeto form pasó las validaciones")
             setLoading(true)
             /* Espacio para codear la petición http */
+            /*  ------------------------------------------------- */
+            try {
+                const docRef = await addDoc(collection(database, "logros"), form);
+                console.log("Document written with ID: ", docRef.id);
+                alert("Se há creado un nuevo logro")
+              } catch (e) {
+                console.error("Error adding document: ", e);
+              }
+             /*  ------------------------------------------------- */
         }else{
             alert("El objeto form no pasó las validaciones de CONTROL DE FORMULARIO")
         }

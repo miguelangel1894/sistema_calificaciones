@@ -121,14 +121,14 @@ input[type=submit]:hover{
 
     .option-file .formHistory .textArea-area textarea{
         width: 90%;
-        height: 45px;
+        height: 115px;
         margin: 5px;
         border: solid 2px #eeeeee;
         border-radius: 5px;
         text-align: center;
         background-color: white;
         color: #666666;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
         text-align: start;
         padding-top: 2px;
         padding-left: 20px;

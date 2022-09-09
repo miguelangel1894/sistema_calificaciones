@@ -7,6 +7,7 @@ export const useForm = (initialForm, validationsForm) => {
     const[form, setForm] = useState(initialForm)
     const[error, setError] = useState({})
     const[loading, setLoading] = useState(false)
+    const[logro, setLogro] = useState(false)
     const[response, setResponse] = useState(null)
 
     const handleChange = (e) =>{
@@ -27,14 +28,16 @@ export const useForm = (initialForm, validationsForm) => {
         setError(validationsForm(form))
 
         if (Object.keys(error).length === 0) {
-            alert("el objeto form pasó las validaciones")
-            setLoading(true)
+                setLoading(true) 
+            /* alert("el objeto form pasó las validaciones") */
             /* Espacio para codear la petición http */
             /*  ------------------------------------------------- */
             try {
                 const docRef = await addDoc(collection(database, "logros"), form);
                 console.log("Document written with ID: ", docRef.id);
-                alert("Se há creado un nuevo logro")
+                setLoading(false)
+                setLogro(true)
+                /* alert("Se há creado un nuevo logro") */
               } catch (e) {
                 console.error("Error adding document: ", e);
               }
@@ -48,6 +51,7 @@ export const useForm = (initialForm, validationsForm) => {
         form,
         error,
         loading,
+        logro,
         response,
         handleChange,
         handleBlur,

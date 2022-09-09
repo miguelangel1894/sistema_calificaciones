@@ -4,8 +4,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin-top: 3px;
+    margin-bottom: 7px;
     width: 97%;
-    height: 94%;
+    height: 96%;
     background-color: white;
 }
 
@@ -111,6 +113,11 @@ input[type=submit]:hover{
     box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
     }
 
+    .option-file .formHistory  select option{
+        background: #042940;
+        color: white;
+    }
+
     .option-file .formHistory .textArea-area{
         display: flex;
         flex-wrap: nowrap;
@@ -133,3 +140,80 @@ input[type=submit]:hover{
         padding-top: 2px;
         padding-left: 20px;
     }
+
+    .option-file .formHistory #send{
+        border: none;
+        background: none;
+    }
+    
+
+    .option-file .formHistory #send ion-icon{
+        font-size: 41px;
+        color: #9fc131;
+    }
+
+    .option-file .formHistory #send ion-icon:hover{
+        font-size: 41px;
+        color: #6e9928;
+        cursor:pointer;
+    }
+    
+    
+    .progress-bar-value {
+        width: 100%;
+        height: 2%;
+        background-color: #9fc131;
+        animation: indeterminateAnimation 1s infinite linear;
+        transform-origin: 0% 50%;
+        border-radius: 10px;
+    }
+      
+      @keyframes indeterminateAnimation {
+        0% {
+          transform:  translateX(0) scaleX(0);
+        }
+        40% {
+          transform:  translateX(0) scaleX(0.4);
+        }
+        100% {
+          transform:  translateX(100%) scaleX(0.5);
+        }
+      }
+
+      .option-file .submit-info{
+        width: 300px;
+        height: 36px;
+        border-radius: 12px;
+        margin-top: -25px;
+        margin-bottom: 49px;
+        margin-left: 17px;
+        display: flex;
+        flex-direction: row;
+        background: #6e9928;
+        position: relative;
+      }
+
+      .option-file .submit-info .info-p{
+        font-size: 13px;
+        margin-left: 45px;
+        position: absolute;
+        background: #6e9928;
+      }
+
+      .option-file .submit-info ion-icon{
+        margin-top: 2px;
+        margin-left: 15px;
+      }
+
+      .rotate{
+        animation: animName 2s linear infinite;
+      }
+      
+      @keyframes animName {
+       0%{
+          transform: rotate(0deg);
+         }
+      100%{
+          transform: rotate(360deg);
+         }
+      }

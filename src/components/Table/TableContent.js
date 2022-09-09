@@ -10,7 +10,7 @@ export function TableContent ({tableConfig}){
             <td colSpan={tableConfig.colSpan}>Bohorquez Cuello</td>
             <td>Miguel Ángel</td>
             <td><p>Kinder</p></td>
-            <td><button><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
+            <td><button id="btn-whatsapp"><ion-icon name="logo-whatsapp"></ion-icon><p>3045232221</p></button></td>
             <td className="option">
                 <ion-icon name="document-attach"></ion-icon>
                 <ion-icon name="print"></ion-icon>

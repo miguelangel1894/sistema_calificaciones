@@ -33,14 +33,16 @@ export function TableContentHistory({tableConfig}){
         error,
         loading,
         response,
+        logro,
         handleChange,
         handleBlur,
         handleSubmit} = useForm(initialForm, validationsForm)
 
     return(
         <tr className="option-file">
-            
-            <td colSpan={6}>
+            <td colSpan={7}>
+                
+                {loading? <div className="progress-bar-value"></div> : ''}
                 <form className="formHistory" onSubmit={handleSubmit}>
                     <div className="select-dimension-container">
                         <label className="dimension-label" htmlFor="dimension">Dimensión</label>
@@ -83,17 +85,25 @@ export function TableContentHistory({tableConfig}){
                                     onBlur={handleBlur} 
                                     onChange={handleChange} 
                                     value={form.logro}>
-                        </textarea>
-                
+                        </textarea>           
                     </div>
-                    <button type="submit" value="enviar"><ion-icon name="add-circle"></ion-icon></button>
+                    <button type="submit" 
+                            id="send" 
+                            value="enviar"
+                            disabled={loading}
+                            className={loading ? 'rotate':''}>
+                                {loading ? <ion-icon className={loading ? 'rotate':''} name="sync"></ion-icon> : <ion-icon  name="add-circle" toltip></ion-icon> }
+                    </button>
                 </form>
-                
+                {logro? <div className="submit-info">
+                        <ion-icon name="cloud-done-outline"></ion-icon>
+                        <p className="info-p">Se ha creado un nuevo logro</p>
+                </div> : ''}
             </td>
-            <td className="option">
+            {/* <td className="option">
                 <ion-icon name="create"></ion-icon>
                 <ion-icon name="close-circle"></ion-icon>
-            </td>  
+            </td>  */} 
         </tr>
     )
 }

@@ -5,6 +5,7 @@ import {TableContentHistory} from './TableContentHistory'
 
 export function Table(){
     let titulos =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
+    let periodo =["Periodos"];
 
     let tableConfig = {
         title: "Estudiantes",
@@ -32,9 +33,11 @@ export function Table(){
                         </td>
                     )}
                 </tr>
+                
 
                 {tableConfig.isStudent ? <TableContent tableConfig/> : <TableContentHistory tableConfig/>}
-
+                
+                        
                 <tr className="footer">
                     <td colSpan={7}>
                         <div className="table-footer">

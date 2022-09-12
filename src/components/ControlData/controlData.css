@@ -13,20 +13,12 @@
     border-radius: 10px;
     background: white;
     position: relative;
-}
-
-.controlData-container .title-container .color-container{
-    width: 14px;
-    height: 100%;
-    background: #9fc131;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
-    position: absolute;
+    border-left: 18px solid #9fc131;
 }
 
 .controlData-container .title-container h2{
     margin-top: 22px;
-    margin-left: 20px;
+    margin-left: -51px;
     position: absolute;
     color: #4d4d4d;
     font-family: 'Poppins', sans-serif;
@@ -34,7 +26,7 @@
 
 .controlData-container .title-container p{
     margin-top: 41px;
-    margin-left: 20px;
+    margin-left: -21px;
     font-size: 11px;
     position: absolute;
     color: #4d4d4d;

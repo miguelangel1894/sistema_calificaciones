@@ -51,6 +51,7 @@ export function TableContentHistory({tableConfig}){
                                 onBlur={handleBlur} 
                                 onChange={handleChange} 
                                 value={form.dimension}>
+                            <option value="">Seleccione</option>        
                             <option value="Cognitiva">Cognitiva</option>
                             <option value="Comunicativa">Comunicativa</option>
                             <option value="Estética">Estética</option>
@@ -68,6 +69,7 @@ export function TableContentHistory({tableConfig}){
                                 onBlur={handleBlur} 
                                 onChange={handleChange} 
                                 value={form.asignatura}>
+                            <option value="">Seleccione</option>
                             <option value="Matemáticas">Matemáticas</option>
                             <option value="Áreas integradas">Áreas integradas</option>
                             <option value="Lecto-escritura">Lecto-escritura</option>
@@ -81,10 +83,12 @@ export function TableContentHistory({tableConfig}){
 
                     <div className="textArea-area">
                         <textarea   name="logro" 
-                                    cols={5}
+                                    col={5}
                                     onBlur={handleBlur} 
                                     onChange={handleChange} 
-                                    value={form.logro}>
+                                    value={form.logro}
+                                    placeholder="Escribe el logro que deseas evaluar.">
+                                    
                         </textarea>           
                     </div>
                     <button type="submit" 
@@ -95,15 +99,7 @@ export function TableContentHistory({tableConfig}){
                                 {loading ? <ion-icon className={loading ? 'rotate':''} name="sync"></ion-icon> : <ion-icon  name="add-circle" toltip></ion-icon> }
                     </button>
                 </form>
-                {logro? <div className="submit-info">
-                        <ion-icon name="cloud-done-outline"></ion-icon>
-                        <p className="info-p">Se ha creado un nuevo logro</p>
-                </div> : ''}
             </td>
-            {/* <td className="option">
-                <ion-icon name="create"></ion-icon>
-                <ion-icon name="close-circle"></ion-icon>
-            </td>  */} 
         </tr>
     )
 }

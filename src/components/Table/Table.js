@@ -5,12 +5,13 @@ import {TableContentHistory} from './TableContentHistory'
 
 export function Table(){
     let titulos =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
-    let periodo =["Periodos"];
+    let periodos =["Dimensión","Asignatura","Periodo [1]-[2022] Grado: kinder A","Opciones"];
 
     let tableConfig = {
         title: "Estudiantes",
         icon: true,
-        isStudent: false
+        isStudent: false,
+        titleColSpan: 1
     }
 
     return(
@@ -26,10 +27,12 @@ export function Table(){
                     </td> 
                 </tr>       
                 <tr className="title">
-                    {titulos.map( titulo =>
+                    {periodos.map( titulo =>
                         <td key={titulo.toString()}>
-                            {titulo} 
-                            <ion-icon name="caret-down-outline"></ion-icon>
+                            <div className="title-container">
+                                <p>{titulo}</p>
+                                <ion-icon name="caret-down-outline"></ion-icon>
+                            </div>
                         </td>
                     )}
                 </tr>
@@ -37,6 +40,17 @@ export function Table(){
 
                 {tableConfig.isStudent ? <TableContent tableConfig/> : <TableContentHistory tableConfig/>}
                 
+                {tableConfig.isStudent ? '':
+                
+                <tr className="option-file">
+                    <td  id='td-dimension'align="center"><p>dimension</p></td>
+                    <td  id='td-area' align="center"><p>Matemáticas</p></td>
+                    <td  id='td-logro'align="center"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></td>
+                    <td className="option">
+                        <ion-icon name="create"></ion-icon>
+                        <ion-icon name="close-circle"></ion-icon>
+                    </td>
+                </tr>}
                         
                 <tr className="footer">
                     <td colSpan={7}>

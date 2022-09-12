@@ -62,16 +62,29 @@
 }
 
 .table-container .title{
-    color: #454545;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    height: 39px;
     border-bottom: 4px solid #ecebeb;
     background: #fffdfd;
 }
 
-.table-container .title ion-icon{
-    margin: -9px;
+.title-container{
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+.table-container .title .title-container p {
+    color: #454545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-left: 8px;
+    height: 39px;
+}
+
+
+.table-container .title  .title-container ion-icon{
+    margin: 8px;
     padding-left: 9px;
     color: #e9e9e9;
 }
@@ -104,12 +117,31 @@
 .table-container .option-file p{
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: 7px;
     margin-top: 7px;
     background: #9FC131;
     padding: 2px;
     border-radius: 1em;
+}
+
+.table-container .option-file #td-logro p{
+    width: 74%;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.table-container .option-file #td-dimension p{
+    width: 110%;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.table-container .option-file #td-area p{
+    width: 110%;
+    padding: 6px;
+    border-radius: 12px;
+    margin-left: 39px;
 }
 
 .table-container .option-file #btn-whatsapp{

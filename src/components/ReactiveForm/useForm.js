@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import { collection, addDoc, getDocs  } from "firebase/firestore";
 import {database} from '../../firebaseConfig'
 
@@ -8,7 +8,7 @@ export const useForm = (initialForm, validationsForm) => {
     const[error, setError] = useState({})
     const[loading, setLoading] = useState(false)
     const[logro, setLogro] = useState(false)
-    const[response, setResponse] = useState(null)
+    const[response, setResponse] = useState([])
 
     const handleChange = (e) =>{
         const {name, value} = e.target
@@ -38,6 +38,14 @@ export const useForm = (initialForm, validationsForm) => {
                 setLoading(false)
                 setLogro(true)
                 /* alert("Se há creado un nuevo logro") */
+
+                const docs = []
+                const querySnapshot = await getDocs(collection(database, "logros"));
+                querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id: doc.id})
+                setResponse(docs)
+                });
+
               } catch (e) {
                 console.error("Error adding document: ", e);
               }
@@ -46,6 +54,7 @@ export const useForm = (initialForm, validationsForm) => {
             alert("El objeto form no pasó las validaciones de CONTROL DE FORMULARIO")
         }
     }
+
 
     return {
         form,

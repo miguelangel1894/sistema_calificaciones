@@ -1,22 +1,29 @@
 import React  from "react";
-import "./Table.css";
-import {TableContent} from './TableContent'
+import { useTable } from "./useTable";
 import {TableContentHistory} from './TableContentHistory'
 
-export function Table(){
-    let titulos =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
-    let periodos =["Dimensión","Asignatura","Periodo [1]-[2022] Grado: kinder A","Opciones"];
+import "./Table.css";
 
-    let tableConfig = {
-        title: "Estudiantes",
-        icon: true,
-        isStudent: false,
-        titleColSpan: 1
-    }
+    export const Table = () => {
+  
+    const {logros,
+            setLogros,
+            loadingFetch,
+            setLoadingFetch,
+            scroll,
+            setScroll,
+            titulos,
+            periodos,
+            tableConfig,
+            handleFecth,
+            handlePagination,
+            handleNextButton,
+            handleUndoButton,
+            paginacionIntervalo} = useTable()
 
     return(
-        <table className="table-container">
-            <tbody> 
+        <table className={scroll ? 'table-container scroll':'table-container'}>
+            <thead> 
                 <tr>
                     <td colSpan={7} className="table-info-result">
                         <div className="div-info">
@@ -36,28 +43,41 @@ export function Table(){
                         </td>
                     )}
                 </tr>
-                
+            </thead>    
+            <tbody>            
+                {tableConfig.isStudent ? <TableContentHistory tableConfig/> : ""}
 
-                {tableConfig.isStudent ? <TableContent tableConfig/> : <TableContentHistory tableConfig/>}
-                
-                {tableConfig.isStudent ? '':
-                
+
+                { Array.isArray(logros) && logros.length === 0 ?  
                 <tr className="option-file">
-                    <td  id='td-dimension'align="center"><p>dimension</p></td>
-                    <td  id='td-area' align="center"><p>Matemáticas</p></td>
-                    <td  id='td-logro'align="center"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></td>
-                    <td className="option">
-                        <ion-icon name="create"></ion-icon>
-                        <ion-icon name="close-circle"></ion-icon>
-                    </td>
-                </tr>}
-                        
+                        <td colSpan={4} id='td-logro' align="center"><p>No hay datos</p></td>
+                </tr> : ''}
+
+
+                {loadingFetch ? 
+                <tr className="loading">
+                        <td className={loadingFetch ? 'rotate': ''} colSpan={4} align="center"><ion-icon name="sync"></ion-icon></td>
+                </tr> : ''}
+
+                
+                {paginacionIntervalo.map((logro, index) =>
+                    <tr key={index} className="option-file">
+                        <td  id='td-dimension'align="center"><p>{logro.dimension}</p></td>
+                        <td  id='td-area' align="left"><p>{logro.asignatura}</p></td>
+                        <td  id='td-logro'align="center"><p>{logro.logro}</p></td>
+                        <td className="option">
+                            <ion-icon name="create"></ion-icon>
+                            <ion-icon name="close-circle"></ion-icon>
+                        </td>
+                    </tr>
+                )}
+       
                 <tr className="footer">
                     <td colSpan={7}>
                         <div className="table-footer">
-                            <button><ion-icon name="caret-forward"></ion-icon></button>
-                            <button><ion-icon name="caret-back"></ion-icon></button>
-                            <select name="items" id="items">
+                            <button onClick={handleNextButton}><ion-icon name="caret-forward"></ion-icon></button>
+                            <button onClick={handleUndoButton}><ion-icon name="caret-back"></ion-icon></button>
+                            <select name="items" id="items" onChange={handlePagination}>
                                 <option value="10">10</option>
                                 <option value="20">20</option>
                             </select>

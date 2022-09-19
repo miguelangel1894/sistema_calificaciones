@@ -1,10 +1,30 @@
 .table-container{
     border-collapse: collapse;
-    overflow: hidden;
     text-align: center;
     width: 96%;
     z-index: 2;
 }
+
+/* table{
+    display: block;
+    overflow-y: auto;
+    width: 15vh;
+}
+
+table::-webkit-scrollbar {
+    width: 10px;              
+}
+  
+table::-webkit-scrollbar-track {
+    background: none;       
+    margin-left: 10px; 
+}
+  
+  table::-webkit-scrollbar-thumb {
+    background-color: #9fc131;  
+    border-radius: 20px;       
+    border-left: 5px;     
+  } */
 
 .table-container .table-info-result{
     width: 320px;
@@ -105,6 +125,10 @@
     width: 20px;  
 }
 
+.table-container .option-file:hover{
+    background: rgb(243, 243, 243);
+}
+
 .table-container td{
     height: 1em;
 }
@@ -125,16 +149,27 @@
     border-radius: 1em;
 }
 
+.table-container .loading ion-icon{
+    color: #ffffff;
+}
+
 .table-container .option-file #td-logro p{
     width: 74%;
     padding: 6px;
     border-radius: 12px;
+    background: #ffffff;
+    border-radius: 6px;
+    color: #494949;
+    border: 1px solid #e1e1e1;
 }
 
 .table-container .option-file #td-dimension p{
     width: 110%;
     padding: 6px;
     border-radius: 12px;
+    background: #ffffff;
+    border-radius: 6px;
+    color: #494949;
 }
 
 .table-container .option-file #td-area p{
@@ -142,6 +177,10 @@
     padding: 6px;
     border-radius: 12px;
     margin-left: 39px;
+    background: #ffffff;
+    border-radius: 6px;
+    color: #494949;
+    
 }
 
 .table-container .option-file #btn-whatsapp{
@@ -246,3 +285,16 @@
 .table-container .option-file .textArea-area ion-icon{
     width: 20px;
 }
+
+.rotate{
+    animation: animName 2s linear infinite;
+  }
+  
+  @keyframes animName {
+   0%{
+      transform: rotate(0deg);
+     }
+  100%{
+      transform: rotate(360deg);
+     }
+  }

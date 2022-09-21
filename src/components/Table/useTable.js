@@ -1,53 +1,62 @@
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { collection, getDocs  } from "firebase/firestore";
 import {database} from '../../firebaseConfig'
 
 export const useTable = () =>{
 
-    const[logros, setLogros] = useState([])
-    const[loadingFetch, setLoadingFetch] = useState(false)
-    const[scroll, setScroll] = useState(false)
+    const[listadoLogros, setlistadoLogros] = useState([])
+    const[mostrarLoading, setmostrarLoading] = useState(false)
     const[paginacionIntervalo, setPaginacionIntervalo] = useState([])
+    const[ocultarForm, setocultarForm] = useState(false)
+    const[intervalo, setIntervalo] = useState(0)
     
     
-    let titulos =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
+    let titulos  =["Fecha de registro", "ID", "Apellidos", "Nombres", "Grados", "Contacto Acudiente", "Opciones"];
     let periodos =["Dimensión","Asignatura","Periodo [1]-[2022] Grado: kinder A","Opciones"];
 
-    let tableConfig = {
-        title: "Estudiantes",
-        icon: true,
-        isStudent: false,
-        titleColSpan: 1,
-        scroll: false
+    let configuracionTabla = {
+        title: "Logros",
+        iconCloud: true,
+        isStudent: ocultarForm,
+        titleColSpan: 1
     }
 
-    useEffect(cargarLogros =>{
+    useEffect(cargarlistadoLogros =>{
         const fetchData = async()=>{
                 const docs = []
-                setLoadingFetch(true)
+                setmostrarLoading(true)
                 const querySnapshot = await getDocs(collection(database, "logros"));
                 querySnapshot.forEach((doc) => {
                 docs.push({...doc.data(), id: doc.id})
                 });
-                setLoadingFetch(false)
-                setLogros(docs)
+                setmostrarLoading(false)
+                setlistadoLogros(docs)
                 setPaginacionIntervalo(docs)
-                setScroll(true)
                 console.log("ejecutando useEffects")
-                console.log(logros)
             }
-            fetchData()
-            
+            fetchData()         
     }, [])
 
-    const handleFecth = (e) => {
+    useEffect(paginarlistadoLogros=>{
+        let intervalo = 10
+        let paginacionTabla = listadoLogros.slice(0, intervalo)
+        setPaginacionIntervalo(paginacionTabla)
+        setIntervalo(intervalo)
+    },[listadoLogros])
 
+    useEffect(()=>{
+        console.log('haciendo clic')
+    },[ocultarForm])
+
+    const handleClicOcultar = (e) =>{
+        setocultarForm(!ocultarForm)
     }
 
     const handlePagination = (e) => {
         let intervalo = e.target.value
-        let paginacionTabla = logros.slice(0, intervalo)
+        let paginacionTabla = listadoLogros.slice(0, intervalo)
         setPaginacionIntervalo(paginacionTabla)
+        setIntervalo(intervalo)
         console.log(e.target.value)
     }
 
@@ -58,7 +67,7 @@ export const useTable = () =>{
         min = min + 10
         max = max + 10
 
-        let paginacionTabla = logros.slice(min , max)
+        let paginacionTabla = listadoLogros.slice(min , max)
         setPaginacionIntervalo(paginacionTabla)
         console.log(paginacionTabla)
     }
@@ -67,11 +76,11 @@ export const useTable = () =>{
         let min =0
         let max =10
 
-        if (min == 0) {
+        if (min === 0) {
             min = 0
             max = 10
 
-            let paginacionTabla = logros.slice(min , max)
+            let paginacionTabla = listadoLogros.slice(min , max)
             setPaginacionIntervalo(paginacionTabla)
             console.log(paginacionTabla)
         }else{
@@ -79,28 +88,27 @@ export const useTable = () =>{
             min = min - 10
             max = max - 10
 
-            let paginacionTabla = logros.slice(min , max)
+            let paginacionTabla = listadoLogros.slice(min , max)
             setPaginacionIntervalo(paginacionTabla)
             console.log(paginacionTabla)
         }
     }
 
     return{
-        logros,
-        setLogros,
-        loadingFetch,
-        setLoadingFetch,
-        scroll,
-        setScroll,
+        listadoLogros,
+        setlistadoLogros,
+        mostrarLoading,
+        setmostrarLoading,
         titulos,
         periodos,
-        tableConfig,
-        handleFecth,
+        configuracionTabla,
+        handleClicOcultar,
         handlePagination,
         handleNextButton,
         handleUndoButton,
-        paginacionIntervalo
+        handleClicOcultar,
+        paginacionIntervalo,
+        intervalo,
+        ocultarForm,
     }
 }
-
-

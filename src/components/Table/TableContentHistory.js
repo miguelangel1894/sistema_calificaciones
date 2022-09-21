@@ -40,8 +40,7 @@ export function TableContentHistory({tableConfig}){
 
     return(
         <tr className="option-file">
-            <td colSpan={7}>
-                
+            <td className="td-form" colSpan={7}>        
                 {loading? <div className="progress-bar-value"></div> : ''}
                 <form className="formHistory" onSubmit={handleSubmit}>
                     <div className="select-dimension-container">

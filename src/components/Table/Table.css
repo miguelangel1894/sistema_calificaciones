@@ -45,6 +45,8 @@ table::-webkit-scrollbar-track {
     flex-direction: row;
     background: white;
     border-bottom: 1px solid #e2e2e2;
+    border-left: 0.1em solid rgb(233 232 232);
+    border-top: 0.1em solid rgb(233 232 232);
 }
 
 .table-container .table-info-result .div-info ion-icon{
@@ -84,6 +86,8 @@ table::-webkit-scrollbar-track {
 .table-container .title{
     border-bottom: 4px solid #ecebeb;
     background: #fffdfd;
+    border-left: 0.1em solid rgb(233 232 232);
+    border-right: 0.1em solid rgb(233 232 232);
 }
 
 .title-container{
@@ -122,11 +126,17 @@ table::-webkit-scrollbar-track {
 .table-container .option-file{
     background: rgb(255, 255, 255);
     border-bottom: 0.1em solid rgb(247, 247, 247);
-    width: 20px;  
+    width: 20px;
+    border-left: 0.1em solid rgb(233 232 232);
+    border-right: 0.1em solid rgb(233 232 232);  
 }
 
 .table-container .option-file:hover{
-    background: rgb(243, 243, 243);
+    background: rgb(74, 200, 211);
+}
+
+.table-container .option-file .td-form{
+    height: 7em;
 }
 
 .table-container td{
@@ -150,7 +160,7 @@ table::-webkit-scrollbar-track {
 }
 
 .table-container .loading ion-icon{
-    color: #ffffff;
+    color: #31adc1;
 }
 
 .table-container .option-file #td-logro p{
@@ -273,6 +283,7 @@ table::-webkit-scrollbar-track {
     outline: none;
     font-family: 'Poppins', sans-serif;
 } */
+
 
 .table-container .option-file .textArea-area ion-icon{
     color: #9FC131;

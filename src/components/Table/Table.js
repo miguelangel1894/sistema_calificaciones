@@ -26,6 +26,8 @@ export const Table = () => {
                             <ion-icon name="albums"></ion-icon>
                             <h2>Resultados</h2>
                             <button>{configuracionTabla.iconCloud ? <ion-icon name="cloud-done"></ion-icon> : <ion-icon name="cloud-upload"></ion-icon>} {configuracionTabla.title}</button>
+                            <button className="button-create" onClick={handleClicOcultar}><ion-icon name="add-circle"></ion-icon></button>
+                            <button className="button-create" onClick={handleClicOcultar}><ion-icon name="sync-outline"></ion-icon></button>
                         </div>
                     </td> 
                 </tr>       
@@ -41,13 +43,18 @@ export const Table = () => {
                 </tr>
             </thead>    
             <tbody>
-                            
+                {ocultarForm ? 
+                <tr className="close-form-tr">
+                    <td className="close-form-td" colSpan={4} align="right">
+                        <button id="button-close" onClick={handleClicOcultar}><ion-icon name="close-outline"></ion-icon></button>
+                    </td>
+                </tr> : ''}
                 {ocultarForm ? <TableContentHistory configuracionTabla/> : ""}
-
+                           
 
                 { Array.isArray(listadoLogros) && listadoLogros.length === 0 ?  
-                <tr className="option-file">
-                        <td colSpan={4} id='td-logro' align="center"><p>No hay datos</p></td>
+                <tr className="row-data-result">
+                        <td colSpan={4} id='col-logro-result' align="center"><p>No hay datos</p></td>
                 </tr> : ''}
 
 
@@ -58,10 +65,10 @@ export const Table = () => {
 
                 
                 {paginacionIntervalo.map((logro, index) =>
-                    <tr key={index} className="option-file">
-                        <td  id='td-dimension'align="center"><p>{logro.dimension}</p></td>
-                        <td  id='td-area' align="left"><p>{logro.asignatura}</p></td>
-                        <td  id='td-logro'align="center"><p>{logro.logro}</p></td>
+                    <tr key={index} className="row-data-result">
+                        <td  id='col-dimension-result'align="center"><p>{logro.dimension}</p></td>
+                        <td  id='col-area-result' align="left"><p>{logro.asignatura}</p></td>
+                        <td  id='col-logro-result'align="center"><p>{logro.logro}</p></td>
                         <td className="option">
                             <ion-icon name="create"></ion-icon>
                             <ion-icon name="close-circle"></ion-icon>
@@ -74,7 +81,7 @@ export const Table = () => {
                         <div className="table-footer">
                             <button onClick={handleNextButton}><ion-icon name="caret-forward"></ion-icon></button>
                             <button onClick={handleUndoButton}><ion-icon name="caret-back"></ion-icon></button>
-                            <button onClick={handleClicOcultar}><ion-icon name="add-circle"></ion-icon></button>
+
                             <select name="items" id="items" onChange={handlePagination}>
                                 <option value="10">10</option>
                                 <option value="20">20</option>

@@ -1,5 +1,6 @@
 import React from "react";
 import {useForm} from '../ReactiveForm/useForm'
+import { useTable } from "./useTable";
 
 export function TableContentHistory({tableConfig}){
 
@@ -37,6 +38,9 @@ export function TableContentHistory({tableConfig}){
         handleChange,
         handleBlur,
         handleSubmit} = useForm(initialForm, validationsForm)
+
+    
+    const {handleClicOcultar} = useTable()    
 
     return(
         <tr className="option-file">
@@ -86,7 +90,7 @@ export function TableContentHistory({tableConfig}){
                                     onBlur={handleBlur} 
                                     onChange={handleChange} 
                                     value={form.logro}
-                                    placeholder="Escribe el logro que deseas evaluar.">
+                                    placeholder="Escribe el logro que deseas crear.">
                                     
                         </textarea>           
                     </div>
@@ -97,6 +101,7 @@ export function TableContentHistory({tableConfig}){
                             className={loading ? 'rotate':''}>
                                 {loading ? <ion-icon className={loading ? 'rotate':''} name="sync"></ion-icon> : <ion-icon  name="add-circle" toltip></ion-icon> }
                     </button>
+                    
                 </form>
             </td>
         </tr>

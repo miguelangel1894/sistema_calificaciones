@@ -5,26 +5,35 @@
     z-index: 2;
 }
 
-/* table{
-    display: block;
-    overflow-y: auto;
-    width: 15vh;
+
+.table-container .table-info-result .div-info .button-create{
+    width: 44px;
+    margin-left: 1px;
+    background: none;
+    border-radius: 5px;   
 }
 
-table::-webkit-scrollbar {
-    width: 10px;              
+.table-container .table-info-result .div-info .button-create ion-icon{
+    font-size: 23px;
+    color: #585858;
 }
-  
-table::-webkit-scrollbar-track {
-    background: none;       
-    margin-left: 10px; 
+
+.table-container .table-info-result .div-info .button-create ion-icon:hover{
+    color: #31adc1;
+    cursor:pointer;
+  }
+
+ .table-container #button-close{
+    border: none;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: -1px; 
+} 
+
+#button-close ion-icon{
+    font-size: 24px;
+    color: #ffa665;
 }
-  
-  table::-webkit-scrollbar-thumb {
-    background-color: #9fc131;  
-    border-radius: 20px;       
-    border-left: 5px;     
-  } */
 
 .table-container .table-info-result{
     width: 320px;
@@ -36,11 +45,11 @@ table::-webkit-scrollbar-track {
 }
 
 .table-container .table-info-result .div-info{
-    width: 212px;
+    width: 336px;
     height: 33px;
     border-top-left-radius: 9px;
     border-top-right-radius: 0.7em;
-    margin: -1px;
+    margin: -2px;
     display: flex;
     flex-direction: row;
     background: white;
@@ -65,10 +74,7 @@ table::-webkit-scrollbar-track {
 .table-container .table-info-result .div-info button{
     width: 105px;
     height: 26px;
-    border-top-right-radius: 11px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 14px;
     font-family: 'Poppins', sans-serif;
     font-size: 0.7rem;
     color: white;
@@ -123,7 +129,7 @@ table::-webkit-scrollbar-track {
     font-size: 10px;
 }
 
-.table-container .option-file{
+.table-container .row-data-result{
     background: rgb(255, 255, 255);
     border-bottom: 0.1em solid rgb(247, 247, 247);
     width: 20px;
@@ -131,30 +137,33 @@ table::-webkit-scrollbar-track {
     border-right: 0.1em solid rgb(233 232 232);  
 }
 
-.table-container .option-file:hover{
-    background: rgb(74, 200, 211);
+.table-container .row-data-result td{
+    border: 1px solid #f0e5e5;
 }
 
-.table-container .option-file .td-form{
+.table-container .row-data-result:hover{
+    background: rgb(206, 206, 206);
+}
+
+.table-container .row-data-result .td-form{
     height: 7em;
 }
 
-.table-container td{
+/* .table-container td{
     height: 1em;
-}
+} */
 
-.table-container .option-file .option ion-icon{
+.table-container .row-data-result .option ion-icon{
     color: #042940;
     margin-left: 4px;
 }
 
-.table-container .option-file p{
-    color: #ffffff;
+.table-container .row-data-result p{
     font-family: 'Poppins', sans-serif;
     font-size: 11px;
     margin-bottom: 7px;
     margin-top: 7px;
-    background: #9FC131;
+    background: #68BAC8;
     padding: 2px;
     border-radius: 1em;
 }
@@ -163,27 +172,27 @@ table::-webkit-scrollbar-track {
     color: #31adc1;
 }
 
-.table-container .option-file #td-logro p{
+.table-container .row-data-result #col-logro-result p{
     width: 74%;
     padding: 6px;
     border-radius: 12px;
     background: #ffffff;
     border-radius: 6px;
     color: #494949;
-    border: 1px solid #e1e1e1;
+    
 }
 
-.table-container .option-file #td-dimension p{
-    width: 110%;
+.table-container .row-data-result #col-dimension-result p{
+    width: 70%;
     padding: 6px;
     border-radius: 12px;
-    background: #ffffff;
+    background: #31adc1;
     border-radius: 6px;
-    color: #494949;
+    color: #ffffff;
 }
 
-.table-container .option-file #td-area p{
-    width: 110%;
+.table-container .row-data-result #col-area-result p{
+    width: 61%;
     padding: 6px;
     border-radius: 12px;
     margin-left: 39px;
@@ -193,7 +202,7 @@ table::-webkit-scrollbar-track {
     
 }
 
-.table-container .option-file #btn-whatsapp{
+.table-container .row-data-result #btn-whatsapp{
     height: 27px;
     border: none;
     color: #ffffff;
@@ -209,7 +218,7 @@ table::-webkit-scrollbar-track {
     margin: auto;
 }
 
-.table-container .option-file #btn-whatsapp p{
+.table-container .row-data-result #btn-whatsapp p{
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -220,7 +229,7 @@ table::-webkit-scrollbar-track {
     border-radius: 1em;
 }
 
-.table-container .option-file button ion-icon{
+.table-container .row-data-result button ion-icon{
     font-size: 13px;
     color: #ffffff;
     margin-top: 2px;
@@ -239,53 +248,7 @@ table::-webkit-scrollbar-track {
     text-align: center;
 }
 
-/* .table-container .option-file label{
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    color: #666666;
-    position: absolute;
-    margin-left: -60px;
-    margin-top: -31px;
-}
-
-.table-container .option-file select{
-    border: none;
-    background: #ffffff;
-    color: #585858;
-    width: 118px;
-    height: 37px;
-    border-radius: 7px;
-    margin-left: -60px;
-    margin-right: 0px;
-    margin-top: -13px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    outline: none;
-    position: absolute;
-    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-}
-
-.table-container .option-file #dimension *{
-    background:#042940;
-    color: #ffffff;
-}
-
-.table-container .option-file #asignatura *{
-    background:#042940;
-    color: #ffffff;
-} */
-
-/* .table-container .option-file .textArea-area textarea{
-    height: 100px;
-    width: 80%;
-    color: #585858;
-    resize: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-} */
-
-
-.table-container .option-file .textArea-area ion-icon{
+.table-container .row-data-result .textArea-area ion-icon{
     color: #9FC131;
     margin-top: 34px;
     font-size: 3em;
@@ -293,7 +256,7 @@ table::-webkit-scrollbar-track {
 
 }
 
-.table-container .option-file .textArea-area ion-icon{
+.table-container .row-data-result .textArea-area ion-icon{
     width: 20px;
 }
 

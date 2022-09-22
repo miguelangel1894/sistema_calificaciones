@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-top: 5px;
-    margin-bottom: 7px;
-    width: 97%;
-    height: 96%;
-    background-color: white;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    margin-top: -6px;
+    margin-bottom: -1px;
+    margin-left: -2px;
+    width: 100.4%;
+    height: 108%;
+    background-color:rgb(236, 236, 236);
+
 }
 
 .option-file form textarea{
@@ -114,7 +114,7 @@ input[type=submit]:hover{
     }
 
     .option-file .formHistory  select option{
-        background: #042940;
+        background: #ffa665;
         color: white;
     }
 
@@ -130,14 +130,14 @@ input[type=submit]:hover{
         width: 90%;
         height: 96px;
         margin: 5px;
-        border: solid 2px #eeeeee;
+        border: solid 2px #ffa665;
         border-radius: 5px;
         text-align: center;
         background-color: white;
         color: #666666;
         font-family: 'Poppins', sans-serif;
         text-align: start;
-        padding-top: 2px;
+        padding-top: 9px;
         padding-left: 20px;
         font-size: 12px;
     }
@@ -145,29 +145,31 @@ input[type=submit]:hover{
     .option-file .formHistory #send{
         border: none;
         background: none;
+        margin-right: 59px;
     }
     
 
     .option-file .formHistory #send ion-icon{
         font-size: 41px;
-        color: #31adc1;
+        color: #ffa665;
     }
 
     .option-file .formHistory #send ion-icon:hover{
         font-size: 41px;
-        color: #31adc1;
+        color: #ffbd8e;
         cursor:pointer;
     }
     
     
     .option-file .progress-bar-value {
-        width: 66%;
-        height: 2%;
-        background-color: #31adc1;
+        width: 62%;
+        height: 2px;
+        background-color: #ffa665;;
         animation: indeterminateAnimation 1s infinite linear;
         transform-origin: 0% 50%;
         border-radius: 10px;
-        
+        margin-top: -7px;
+        position: absolute;
     }
       
       @keyframes indeterminateAnimation {

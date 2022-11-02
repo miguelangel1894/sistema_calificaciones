@@ -16,6 +16,7 @@ export const useTable = () =>{
 
     let configuracionTabla = {
         title: "Logros",
+        tamañoFilas:7,
         iconCloud: true,
         isStudent: ocultarForm,
         titleColSpan: 1

@@ -21,7 +21,7 @@ export const Table = () => {
         <table className='table-container'>
             <thead> 
                 <tr>
-                    <td colSpan={7} className="table-info-result">
+                    <td colSpan={configuracionTabla.tamañoFilas} className="table-info-result">
                         <div className="div-info">
                             <ion-icon name="albums"></ion-icon>
                             <h2>Resultados</h2>
@@ -77,7 +77,7 @@ export const Table = () => {
                 )}
        
                 <tr className="footer">
-                    <td colSpan={7}>
+                    <td colSpan={configuracionTabla.tamañoFilas}>
                         <div className="table-footer">
                             <button onClick={handleNextButton}><ion-icon name="caret-forward"></ion-icon></button>
                             <button onClick={handleUndoButton}><ion-icon name="caret-back"></ion-icon></button>
